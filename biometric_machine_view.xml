@@ -15,8 +15,8 @@
 						</h1>
 					</div>
 					<div class="oe_right">
-						
 						<button name="clear_attendance"  string="Clear Attendance" type="object"/>
+						<button name="download_attendance"  string="Download Attendance" type="object"/>
 					</div>
 					
 
@@ -55,7 +55,7 @@
 		
 		
 	
-	<menuitem id="id_add_bio_machine" parent="hr.menu_hr_root" sequence="15" name="Biometric Manager" />	
+	<menuitem id="id_add_bio_machine" parent="hr.menu_hr_root" sequence="15" name="Biometric Device Manager" />	
 
     <menuitem id="id_add_bio_machine_new" parent="id_add_bio_machine"  name="Attendance Machine" action="open_view_attendance_machine" />	
 	
