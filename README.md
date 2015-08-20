@@ -1,1 +1,3 @@
-# hr_biometric_machine
+# Biometric Device Integration - Odoo
+
+
