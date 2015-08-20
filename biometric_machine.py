@@ -15,8 +15,9 @@ class biometric_machine(osv.osv):
 		'company_id': fields.many2one("res.company","Company Name"),
 	}
 
+	def clear_attendance(self,cr,uid,ids,context=None):
+
 	def download_attendance(self,cr,uid,ids,context=None):
-		
 		machine_ip = self.browse(cr,uid,ids).name
 		port = self.browse(cr,uid,ids).port
 		zk = zklib.ZKLib(machine_ip, int(port))
