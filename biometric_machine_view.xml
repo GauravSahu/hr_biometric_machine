@@ -9,18 +9,19 @@
 				<form string="Biometric Machine" version="7.0">
 					
 					<sheet>
+					<div  >
 					<div class="oe_left">
 						<h1>
 							<field name="name" required="1" placeholder="Machine IP"/>
 						</h1>
 					</div>
-					<div class="oe_right">
-						<button name="clear_attendance"  string="Clear Attendance" type="object"/>
-						<button name="download_attendance"  string="Download Attendance" type="object"/>
+					<div class="oe_right oe_button_box">
+						<button name="clear_attendance" string="Clear Data" class="oe_stat_button" icon="fa-remove " type="object"/>
+						<button name="download_attendance"  string="Download Data" class="oe_stat_button" icon="fa-download " type="object"/>
 					</div>
-					
-
-					<group col="4" colspan="4"> 
+					</div>
+					<br/><br/><br/>
+					<group col="4"  colspan="4"> 
 						<field name="port" required="1"/>
 						<field name="ref_name" required="1"/>
 						<field name="address_id"/>
