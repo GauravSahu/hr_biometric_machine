@@ -15,12 +15,12 @@ Install Module Odoo
 
 # Some Usefull Function of ZKLIB
 
-1. To Connect Mechine 
+1. To Connect Machine 
 <pre>
 zk = zklib.ZKLib(machine_ip, int(port))
 res = zk.connect()
 </pre>
-2. To Disconnect Mechine
+2. To Disconnect Machine
 <pre>
 zk.disconnect()
 </pre>
