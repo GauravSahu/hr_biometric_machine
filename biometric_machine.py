@@ -56,3 +56,20 @@ class biometric_machine(osv.Model):
             return True
         else:
             raise osv.except_osv(_('Warning !'),_("Unable to connect, please check the parameters and network connections."))
+
+    def clear_attendance(self, cr, uid, ids, context=None):
+        machine_ip = self.browse(cr,uid,ids).name
+        port = self.browse(cr,uid,ids).port
+        zk = zklib.ZKLib(machine_ip, int(port))
+        res = zk.connect()
+        if res == True:
+            zk.enableDevice()
+            zk.disableDevice()
+            zk.clearAttendance()
+            zk.enableDevice()
+            zk.disconnect()
+            return True
+        else:
+            raise osv.except_osv(_('Warning !'),_("Unable to connect, please check the parameters and network connections."))
+
+
