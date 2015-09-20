@@ -39,7 +39,7 @@ class biometric_machine(osv.Model):
                     if employee_id:
                         address_id = hr_employee.browse(cr,uid,employee_id[0]).address_id
                         category = hr_employee.browse(cr,uid,employee_id[0]).category
-                    # print time_att,lattendance[0],employee_id
+                   
                     try:
                         atten_ids = hr_attendance.search(cr,uid,[('employee_id','=',employee_id[0]),('name','=',atten_time)])
                         if atten_ids:
