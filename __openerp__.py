@@ -4,7 +4,7 @@
     "author" : "Gaurav Sahu",
     "category" : "Generic Modules/Others",
     "website" : "gauravsahu.odoo.com",
-    "description": "A Module for Biometric Device Integration ",
+    "description": "A Module for Biometric Device Integration",
     "depends" : ["base","hr"],
     "init_xml" : [],
     "data" : ["biometric_machine_view.xml"],
