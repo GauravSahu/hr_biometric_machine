@@ -10,7 +10,7 @@ sudo pip install zklib
 </pre>
 Step 2:
 
-Install Module Odoo
+Install Module hr_biometric_machine
 
 
 # Some Usefull Function of ZKLIB
