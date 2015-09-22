@@ -2,51 +2,48 @@
 <openerp>
     <data>
         <record id="view_biometric_machine_form" model="ir.ui.view">
-			<field name="name">biometric.machine.form</field>
-			<field name="model">biometric.machine</field>
-			<field name="type">form</field>
-			<field name="arch" type="xml">
-				<form string="Biometric Machine" version="7.0">
-					
-					<sheet>
-					
-					<div class="oe_left">
-						<h1>
-							<field name="name" required="1" placeholder="Machine IP"/>
-						</h1>
-					</div>
-					<div class="oe_right oe_button_box">
-						<button name="clear_attendance" string="Clear Data" class="oe_stat_button" icon="fa-remove " confirm="Are you sure you want to do this?" type="object"/>
-						<button name="download_attendance"  string="Download Data" class="oe_stat_button" icon="fa-download " type="object" confirm="Are you sure you want to do this?" />
-					</div>
-					
-					<br/><br/><br/>
-					<group col="4"  colspan="4"> 
-						<field name="port" required="1"/>
-						<field name="ref_name" required="1"/>
-						<field name="address_id"/>
-						<field name="company_id"/>
-					</group>
-				</sheet>
-				</form>
-			</field>
-		</record>
-
-		<record id="view_biometric_machine_tree" model="ir.ui.view">
-			<field name="name">biometric.machine.tree</field>
-			<field name="model">biometric.machine</field>
-			<field name="type">tree</field>
-			<field name="arch" type="xml">
-				<tree string="Biometric Machine" version="7.0">
-					<field name="name"/>
-					<field name="ref_name"/>
+		<field name="name">biometric.machine.form</field>
+		<field name="model">biometric.machine</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+		<form string="Biometric Machine" version="7.0">
+			<sheet>
+				<div class="oe_left">
+					<h1>
+						<field name="name" required="1" placeholder="Machine IP"/>
+					</h1>
+				</div>
+				<div class="oe_right oe_button_box">
+					<button name="clear_attendance" string="Clear Data" class="oe_stat_button" icon="fa-remove " confirm="Are you sure you want to do this?" type="object"/>
+					<button name="download_attendance"  string="Download Data" class="oe_stat_button" icon="fa-download " type="object" confirm="Are you sure you want to do this?" />
+				</div>
+				<br/><br/><br/>
+				<group col="4"  colspan="4"> 
+					<field name="port" required="1"/>
+					<field name="ref_name" required="1"/>
 					<field name="address_id"/>
 					<field name="company_id"/>
-				</tree>
-			</field>
-		</record>
+				</group>
+			</sheet>
+		</form>
+		</field>
+	</record>
 
-		<record id="open_view_attendance_machine" model="ir.actions.act_window">
+	<record id="view_biometric_machine_tree" model="ir.ui.view">
+		<field name="name">biometric.machine.tree</field>
+		<field name="model">biometric.machine</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Biometric Machine" version="7.0">
+				<field name="name"/>
+				<field name="ref_name"/>
+				<field name="address_id"/>
+				<field name="company_id"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="open_view_attendance_machine" model="ir.actions.act_window">
             <field name="name">Attendances</field>
             <field name="res_model">biometric.machine</field>
             <field name="view_type">form</field>
@@ -58,7 +55,7 @@
 	
 	<menuitem id="id_add_bio_machine" parent="hr.menu_hr_root" sequence="15" name="Biometric Device Manager" />	
 
-    <menuitem id="id_add_bio_machine_new" parent="id_add_bio_machine"  name="Attendance Machine" action="open_view_attendance_machine" />	
+    	<menuitem id="id_add_bio_machine_new" parent="id_add_bio_machine"  name="Attendance Machine" action="open_view_attendance_machine" />	
 	
 	
 	
