@@ -8,6 +8,6 @@
     "depends" : ["base","hr"],
     "init_xml" : [],
     "data" : ["biometric_machine_view.xml"],
-    "active": True,
+    "active": False,
     "installable": True
 }
