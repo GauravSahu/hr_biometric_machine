@@ -2,7 +2,7 @@
     "name" : "Biometric Device Integration",
     "version" : "1.0",
     "author" : "Gaurav Sahu",
-    "category" : "Generic Modules/Others",
+    "category" : "Custom",
     "website" : "gauravsahu.odoo.com",
     "description": "A Module for Biometric Device Integration",
     "depends" : ["base","hr"],
