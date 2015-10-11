@@ -65,7 +65,8 @@ class biometric_machine(osv.Model):
         if res == True:
             zk.enableDevice()
             zk.disableDevice()
-            zk.clearAttendance()
+            res = zk.clearAttendance()
+            print res
             zk.enableDevice()
             zk.disconnect()
             return True
