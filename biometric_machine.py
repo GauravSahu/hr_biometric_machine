@@ -11,6 +11,7 @@ class biometric_machine(osv.Model):
         'ref_name' : fields.char("Location"),
         'port': fields.integer("Port Number"),
         'address_id' : fields.many2one("res.partner",'Working Address'),
+        'state': fields.selection([('draft','Draft'),('done','Done')],'State'),
         'company_id': fields.many2one("res.company","Company Name")
     }
 
