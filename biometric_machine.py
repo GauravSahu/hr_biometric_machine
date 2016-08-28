@@ -4,6 +4,7 @@ from zklib import zklib
 import time
 from zklib import zkconst
 
+
 class biometric_machine(osv.Model):
     _name= 'biometric.machine'
     _columns = {
@@ -57,6 +58,19 @@ class biometric_machine(osv.Model):
             return True
         else:
             raise osv.except_osv(_('Warning !'),_("Unable to connect, please check the parameters and network connections."))
+
+    #Dowload attendence data regularly
+    def schedule_download(self, cr, uid, context=None):
+        
+            scheduler_line_obj = self.pool.get('biometric.machine')
+            scheduler_line_ids = self.pool.get('biometric.machine').search(cr, uid, [])
+            for scheduler_line_id in scheduler_line_ids:
+                scheduler_line =scheduler_line_obj.browse(cr, uid,scheduler_line_id,context=None)   
+                try:
+                    scheduler_line.download_attendance()
+                except:
+                    raise osv.except_osv(('Warning !'),("Machine with %s is not connected" %(scheduler_line.name)))
+
 
     def clear_attendance(self, cr, uid, ids, context=None):
         machine_ip = self.browse(cr,uid,ids).name

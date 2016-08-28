@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="ir_cron_scheduler_attendence_action" model="ir.cron">
+            <field name="name">Download Attendence</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="True" name="doall"/>
+            <field eval="'biometric.machine'" name="model"/>
+            <field eval="'schedule_download'" name="function"/>
+        </record>
+   </data>
+</openerp>
