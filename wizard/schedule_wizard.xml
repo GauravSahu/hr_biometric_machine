@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<openerp>
+
+  <data>
+    <record id="configure_schedule_wizard" model="ir.ui.view">
+      <field name="name">configure.schedule.wizard</field>
+      <field name="model">configure.attendence</field>
+      <field name="arch" type="xml">
+        <form string="Configuration">
+          
+          <group>
+            <field name="interval_number" />
+            <field name="interval_type" />
+          </group>
+          <footer>
+            <button name="update_interval" string="Save" type="object" class="oe_highlight"/>
+            or
+            <button string="Cancel" class="oe_link" special="cancel"/>
+          </footer>
+
+         </form>
+      </field>
+    </record>
+
+
+    <record id="open_configure_schedule_wizard" model="ir.actions.act_window">
+        <field name="name">Configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">configure.attendence</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="configure_schedule_menu" parent="id_add_bio_machine"  name="Configuration" action="open_configure_schedule_wizard" />
+
+  </data>
+</openerp>
