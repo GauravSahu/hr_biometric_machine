@@ -1,8 +1,19 @@
 from openerp.osv import fields, osv
 from datetime import datetime , timedelta
 from zklib import zklib
+from openerp.tools.translate import _
 import time
 from zklib import zkconst
+
+
+class hr_employee(osv.Model):
+    _name = "hr.employee"
+    _inherit = "hr.employee"
+
+    _columns = {
+        'emp_code': fields.char("Emp Code"),
+        'category': fields.char("category"),
+    }
 
 
 class biometric_machine(osv.Model):
@@ -87,6 +98,7 @@ class biometric_machine(osv.Model):
         else:
             raise osv.except_osv(_('Warning !'),_("Unable to connect, please check the parameters and network connections."))
 
+
 class biometric_data(osv.osv):
     _name = "biometric.data"
     _columns = {
@@ -94,3 +106,4 @@ class biometric_data(osv.osv):
         'emp_code' : fields.char('Employee Code'),
         'mechine_id' : fields.many2one('biometric.machine','Mechine No')
     }
+
