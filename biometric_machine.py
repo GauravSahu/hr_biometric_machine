@@ -1,5 +1,6 @@
 from openerp.osv import fields, osv
 from datetime import datetime , timedelta
+from openerp.tools.translate import _
 from zklib import zklib
 import time
 from zklib import zkconst
