@@ -47,7 +47,7 @@ class biometric_machine(osv.Model):
                             continue
                         else:
                             # print "Date %s, Name %s: %s" % ( lattendance[2].date(), lattendance[2].time(), lattendance[0] )
-                            atten_id = hr_attendance.create(cr,uid,{'name':atten_time,'address_id':address_id.id,'category':category,'day':str(lattendance[2].date()),'employee_id':employee_id[0],'action':'sign_in'})
+                            atten_id = hr_attendance.create(cr,uid,{'name':atten_time,'employee_id':employee_id[0],'action':'sign_in'})
                             # print atten_id
                     except Exception,e:
                         pass
