@@ -3,7 +3,7 @@
 {
     "name" : "Biometric Device Integration",
     "version" : "1.0",
-    "author" : "Gaurav Sahu",
+    "author" : "Gaurav Sahu, Randall Castro",
     "category" : "Custom",
     "website" : "gauravsahu.odoo.com",
     "description": "A Module for Biometric Device Integration",
