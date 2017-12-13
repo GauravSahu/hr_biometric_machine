@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from openerp.osv import fields, osv
 from datetime import datetime , timedelta
 from zklib import zklib
@@ -37,7 +39,7 @@ class biometric_machine(osv.Model):
             zk.disableDevice()
             attendance = zk.getAttendance()
             hr_attendance =  self.pool.get("hr.attendance")
-            hr_employee = self.pool.get("hr.employee") 
+            hr_employee = self.pool.get("hr.employee")
             biometric_data = self.pool.get("biometric.data")
             if (attendance):
                 for lattendance in attendance:
@@ -72,11 +74,11 @@ class biometric_machine(osv.Model):
 
     #Dowload attendence data regularly
     def schedule_download(self, cr, uid, context=None):
-        
+
             scheduler_line_obj = self.pool.get('biometric.machine')
             scheduler_line_ids = self.pool.get('biometric.machine').search(cr, uid, [])
             for scheduler_line_id in scheduler_line_ids:
-                scheduler_line =scheduler_line_obj.browse(cr, uid,scheduler_line_id,context=None)   
+                scheduler_line =scheduler_line_obj.browse(cr, uid,scheduler_line_id,context=None)
                 try:
                     scheduler_line.download_attendance()
                 except:
@@ -106,4 +108,3 @@ class biometric_data(osv.osv):
         'emp_code' : fields.char('Employee Code'),
         'mechine_id' : fields.many2one('biometric.machine','Mechine No')
     }
-

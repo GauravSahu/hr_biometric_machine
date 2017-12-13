@@ -1,1 +1,0 @@
-import daily_attendance
