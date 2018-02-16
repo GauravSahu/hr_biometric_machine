@@ -6,36 +6,36 @@
 		<field name="model">biometric.machine</field>
 		<field name="type">form</field>
 		<field name="arch" type="xml">
-		<form string="Biometric Machine" version="7.0">
-			<sheet>
-				<div class="oe_left">
-					<h1>
-						<field name="name" required="1" placeholder="Machine IP"/>
-					</h1>
-				</div>
-				<div class="oe_right oe_button_box">
-					<button name="clear_attendance" string="Clear Data" class="oe_stat_button" icon="fa-remove " confirm="Are you sure you want to do this?" type="object"/>
-					<button name="download_attendance"  string="Download Data" class="oe_stat_button" icon="fa-download " type="object" confirm="Are you sure you want to do this?" />
-				</div>
-				<br/><br/><br/>
-				<group col="4"  colspan="4"> 
-					<field name="port" required="1"/>
-					<field name="ref_name" required="1"/>
-					<field name="address_id"/>
-					<field name="company_id"/>
-				</group>
-				<notebook>
-					<page string="Attendances Line">
-     					<field name="atten_ids" nolable="1" >
-     						<tree string="Raw Attendances" >
- 	    						<field name="emp_code" readonly="1"/>
- 	    						<field name="name" readonly="1"/>
-     						</tree>
-     					</field>
-     				</page>
-				</notebook>
-			</sheet>
-		</form>
+			<form string="Biometric Machine" version="7.0">
+				<sheet>
+					<div class="oe_left">
+						<h1>
+							<field name="name" required="1" placeholder="Machine IP"/>
+						</h1>
+					</div>
+					<div class="oe_right oe_button_box">
+						<button name="clear_attendance" string="Clear Data" class="oe_stat_button" icon="fa-remove " confirm="Are you sure you want to do this?" type="object"/>
+						<button name="download_attendance"  string="Download Data" class="oe_stat_button" icon="fa-download " type="object" confirm="Are you sure you want to do this?" />
+					</div>
+					<br/><br/><br/>
+					<group col="4"  colspan="4"> 
+						<field name="port" required="1"/>
+						<field name="ref_name" required="1"/>
+						<field name="address_id"/>
+						<field name="company_id"/>
+					</group>
+					<notebook>
+						<page string="Attendances Line">
+							<field name="atten_ids" nolable="1" >
+								<tree string="Raw Attendances" >
+									<field name="emp_code" readonly="1"/>
+									<field name="name" readonly="1"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
 		</field>
 	</record>
 
@@ -58,7 +58,7 @@
             <field name="res_model">biometric.machine</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-        </record>
+    </record>
 	
 		
 		
@@ -89,6 +89,5 @@
             </field>
         </record>
 	
-        
      </data>
 </openerp>
