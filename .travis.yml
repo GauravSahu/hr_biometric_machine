@@ -10,7 +10,6 @@ addons:
     packages:
       - expect-dev  # provides unbuffer utility
       - python-lxml  # because pip installation is slow
-      - zklib # required
 
 virtualenv:
   system_site_packages: true
@@ -20,6 +19,7 @@ env:
   - VERSION="8.0" ODOO_REPO="OCA/OCB"
 
 install:
+  - pip install zklib
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - git clone https://github.com/OCA/web.git ${HOME}/web -b ${VERSION}
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}

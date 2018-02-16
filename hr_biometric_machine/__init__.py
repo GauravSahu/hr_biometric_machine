@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import biometric_machine
-import report
-import wizard
+from . import models
+from . import report
+from . import wizard
