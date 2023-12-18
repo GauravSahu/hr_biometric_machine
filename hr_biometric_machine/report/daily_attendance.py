@@ -1,8 +1,8 @@
 
 # -*- coding: utf-8 -*-
 
-from openerp import tools
-from openerp.osv import fields, osv
+from odoo import tools
+from odoo import fields, osv
 
 
 class report_daily_attendance(osv.osv):
